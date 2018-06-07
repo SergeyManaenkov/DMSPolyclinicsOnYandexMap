@@ -167,26 +167,6 @@ const addPoint = function ( data ) {
 
     clusterer.add(myPlacemark);
 };
-/*
-document.querySelector('body').addEventListener('click', function ( e ) {
-    if(e.target.tagName === "BUTTON" && e.target.classList.contains('add-review-btn')){
-        e.preventDefault();
-        debugger;
-        const pointData = yaMap.balloon.getData();
-        let _form = document.querySelector('.add-review-form');
-        let fields = ['custom_balloon_name','custom_balloon_adress','custom_balloon_description'];
-        let ballonData = {
-            'date': new Date()
-        };
-        for(const field of fields){
-            ballonData[field] = _form[field].value;
-            _form[field].value = '';
-        }
-
-        addPoint({ pointData, ballonData });
-    }
-
-});*/
 
 const initMap = (config) => {
     yaMap = new ymaps.Map(config.container, {
@@ -222,8 +202,6 @@ const makeClusterer = () => {
 
     return clusterer
 };
-
-
 
 const getReviewDataFromForm = (form) => {
     const author = form['author'].value;
