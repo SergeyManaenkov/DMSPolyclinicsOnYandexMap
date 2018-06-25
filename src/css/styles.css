@@ -29,7 +29,6 @@
 }
 
 .review-list-wrapper {
-    height: 155px;
     color: #4f4f4f;
     overflow-Y: auto;
 }
@@ -42,24 +41,31 @@
     margin-bottom: 0;
 }
 
-.review-info {
+.polyclinic-info,
+.doctor-home-info{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+/*.review-info {
     display: flex;
     margin-bottom: 5px;
-}
+}*/
 
-.review-author {
+.doctor-home-title,
+.polyclinic-title{
     font-size: 17px;
     font-weight: 700;
     margin-right: 10px;
 }
 
-.review-place {
+/*.review-place {
     margin-right: 5px;
     white-space: nowrap;
     max-width: 130px;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+}*/
 
 .review-list-wrapper .no-reviews {
     font-size: 18px;

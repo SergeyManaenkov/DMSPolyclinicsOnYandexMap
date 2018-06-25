@@ -1,17 +1,4 @@
-<ul class="review-list">
-    {{#with review}}
-        <li class="review-list-item review">
+
+    {{#with data}}
             {{> "./review.hbs"}}
-        </li>
-    {{else}}
-        {{#each reviews}}
-            <li class="review-list-item review">
-                {{> "./review.hbs"}}
-            </li>
-        {{else}}
-            <li class="no-reviews">
-                Отзывов пока нет...
-            </li>
-        {{/each}}
     {{/with}}
-</ul>
