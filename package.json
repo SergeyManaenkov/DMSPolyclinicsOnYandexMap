@@ -4,7 +4,7 @@
   "author": "SergeyManaenkov",
   "license": "ISC",
   "dependencies": {},
-  /*"main": "dist/index.html",*/
+  "main": "dist/index.html",
   "scripts": {
     /*"dev": "webpack --mode development --display-error-details",
     "build": "webpack --mode production",
