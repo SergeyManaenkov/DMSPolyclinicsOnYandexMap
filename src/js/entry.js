@@ -3,7 +3,7 @@ import carousellItem from '../templates/carouselItem.hbs';
 import reviewList from '../templates/review-list.hbs';
 
 const container = 'mapContainer';
-const center = [37.687224, 55.712539];
+const center = [55.710574, 37.616943];
 const zoom = 13;
 
 const config = {

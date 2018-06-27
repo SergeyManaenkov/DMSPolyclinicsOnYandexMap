@@ -1470,8 +1470,8 @@ var _reviewList2 = _interopRequireDefault(_reviewList);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var container = 'mapContainer';
-var center = [55.75994488110673, 37.61556310502147];
-var zoom = 15;
+var center = [55.710574, 37.616943];
+var zoom = 13;
 
 var config = {
     container: container,
