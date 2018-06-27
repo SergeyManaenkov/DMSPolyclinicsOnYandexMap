@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		filename: './js/scripts.js',
         publicPath: "./../",
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
 	},
 	devtool: "source-map",
 	module: {
@@ -81,7 +81,7 @@ module.exports = {
             filename: "css/styles.css",
             chunkFilename: "[id].css"
         }),
-		new CleanWebpackPlugin('dist',{
+		new CleanWebpackPlugin('public',{
 			verbose: true
 		})
 	]

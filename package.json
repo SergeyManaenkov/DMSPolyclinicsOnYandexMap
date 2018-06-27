@@ -1,20 +1,29 @@
 {
   "name": "GeoReviewYandex",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "author": "SergeyManaenkov",
   "license": "ISC",
   "dependencies": {},
-  "main": "dist/index.html",
+  "main": "index.html",
   "scripts": {
-    /*"dev": "webpack --mode development --display-error-details",
+    "dev": "webpack --mode development --display-error-details",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch",*/
-    "start": "dist/index.html"
-    /*"start": "webpack-dev-server --mode development --open"*/
+    "watch": "webpack --mode development --watch",
+    "startServer": "webpack-dev-server --mode development --open",
+    "start": "node index.js"
   },
   "engines": {
     "node": "10.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergeyManaenkov/DMSPolyclinicsOnYandexMap"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "YandexMap"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
