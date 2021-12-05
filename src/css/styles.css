@@ -41,11 +41,10 @@
     margin-bottom: 0;
 }
 
-.polyclinic-info,
-.doctor-home-info{
+.polyclinic-info{
     display: inline-block;
     float: left;
-    width: 50%;
+    width: 100%;
 }
 /*.review-info {
     display: flex;

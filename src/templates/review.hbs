@@ -13,19 +13,3 @@
         {{/each}}
     </div>
 </div>
-{{#if Description.DoctorHome.Title}}
-    <div class="doctor-home-info">
-        <div class="doctor-home-title">{{Description.DoctorHome.Title}}</div>
-        <div class="doctor-home-phones">
-            {{#each Description.DoctorHome.Phones}}
-                {{this}}<br>
-            {{/each}}
-        </div>
-        <div class="doctor-home-title">График:</div>
-        <div class="doctor-home-work-schedule">
-            {{#each Description.DoctorHome.WorkSchedule}}
-                {{this}}<br>
-            {{/each}}
-        </div>
-    </div>
-{{/if}}

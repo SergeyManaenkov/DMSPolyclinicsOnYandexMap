@@ -90,6 +90,7 @@ const getAddressFromCoords = (coords) => {
 const getCoordsFromAddress = (adress) => {
     return ymaps.geocode(adress).then((res) => {
         // Выбираем первый результат геокодирования.
+        debugger;
         let firstGeoObject = res.geoObjects.get(0);
         
         // Координаты геообъекта.
@@ -194,23 +195,7 @@ const createItemContentLayout = () => {
                             {{ schedule }}<br>
                         {% endfor %}
                     </div>
-                </div>
-                {% if properties.pointData.data.Description.DoctorHome.Title %}
-                    <div class="doctor-home-info">
-                        <div class="doctor-home-title">{{properties.pointData.data.Description.DoctorHome.Title}}</div>
-                        <div class="doctor-home-phones">
-                            {% for phone in properties.pointData.data.Description.DoctorHome.Phones %}
-                                {{ phone }}<br>
-                            {% endfor %}
-                        </div>
-                        <div class="doctor-home-title">График:</div>
-                        <div class="doctor-home-work-schedule">
-                            {% for schedule in properties.pointData.data.Description.DoctorHome.WorkSchedule %}
-                                {{ schedule }}<br>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endif %}`;
+                </div>`;
 
     return  ymaps.templateLayoutFactory.createClass(template);
 };
@@ -260,6 +245,7 @@ const mapMaker = () => {
         adreses.map(function ( pointData ) {
             const coords = getCoordsFromAddress(pointData.Address);
             coords.then(function ( res ) {
+            debugger;
                 modifyPointData( pointData );
                 let newPointData = {
                     coords: res,
@@ -284,11 +270,11 @@ const mapMaker = () => {
 };
 
 function modifyPointData( pointData ) {
-    const reg = /[\n\r]+/g;
+    const reg = /[;\n\r]+/g;
     pointData.Description.Polyclinic.Phones = pointData.Description.Polyclinic.Phones.split(reg);
     pointData.Description.Polyclinic.WorkSchedule = pointData.Description.Polyclinic.WorkSchedule.split(reg);
-    pointData.Description.DoctorHome.Phones = pointData.Description.DoctorHome.Phones.split(reg);
-    pointData.Description.DoctorHome.WorkSchedule = pointData.Description.DoctorHome.WorkSchedule.split(reg);
+    //pointData.Description.DoctorHome.Phones = pointData.Description.DoctorHome.Phones.split(reg);
+    //pointData.Description.DoctorHome.WorkSchedule = pointData.Description.DoctorHome.WorkSchedule.split(reg);
 }
 
 
